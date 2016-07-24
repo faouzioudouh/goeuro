@@ -12,7 +12,7 @@ gulp.task('js', function() {
 
 gulp.task("sass", function () {
     return gulp.src(
-        "scss/*.scss"
+        "content/scss/*.scss"
     ).pipe(sass()).pipe(gulp.dest("build/css"));
 });
     
@@ -26,12 +26,18 @@ gulp.task('libs', function(){
 });
 
 gulp.task('index', function(){
-    return gulp.src(['content/index.html','content/images/**.*'])
+    return gulp.src(['content/index.html'])
             .pipe(print())
             .pipe(gulp.dest('build'));
 });
 
-gulp.task('build', ['js', 'libs','sass', 'index'], function(){
+gulp.task('images', function(){
+    return gulp.src(['content/images/**.*'])
+            .pipe(print())
+            .pipe(gulp.dest('build/images'));
+});
+
+gulp.task('build', ['js', 'libs','sass', 'index','images'], function(){
     return gulp.src(['content/app/**/*.html'])
             .pipe(print())
             .pipe(gulp.dest('build/views'));
