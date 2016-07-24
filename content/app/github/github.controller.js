@@ -32,11 +32,6 @@
 
         });
 
-        $scope.$watch('vm.error.message', function( newVal ){
-            $timeout(function(){
-                vm.error.show = newVal !== undefined && newVal.length > 0;
-            },0)
-        });
 
         /**
          * Get Repositories.
