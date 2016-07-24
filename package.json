@@ -1,0 +1,20 @@
+{
+  "name": "goeuro",
+  "version": "1.0.0",
+  "description": "Github, listing repositories ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Github"
+  ],
+  "author": "Faouzi OUDOUH",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp-webserver": "^0.9.1"
+  },
+  "dependencies": {
+    "angular-route": "^1.5.8"
+  }
+}

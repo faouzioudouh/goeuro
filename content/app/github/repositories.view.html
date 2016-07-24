@@ -1,0 +1,16 @@
+<p class="repositories-count" ng-if="vm.repositories.length">
+    <ng-pluralize count="vm.repositories.length"
+                 when="{'one': '1 Repository.',
+                     'other': '{} Repositories.'}">
+    </ng-pluralize>
+</p>
+
+<ul id="repositories-listing" ng-class="{'loading-background': vm.loading}">
+
+    <li ng-repeat="repository in vm.repositories">
+        <a ng-href="{{repository.html_url}}" target="_blank">
+            {{ repository.name }}
+        </a>
+    </li>
+    
+</ul>
