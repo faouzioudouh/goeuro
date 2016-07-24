@@ -1,11 +1,17 @@
 # goeuro
 Listing Github repositories of given user.
 
-Building
+Install dependencies
 ---------
 just run:
 
     npm install
+
+Building & start server on (http://localhost:8000/)
+---------
+run:
+
+    gulp serve
 
 
 Running tests
